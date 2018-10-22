@@ -91,7 +91,7 @@ class App extends Component {
 
     // const api_call1 = await fetch("http://api.openweathermap.org/data/2.5/weather?zip=" + zip + ",us&APPID=" + API_KEY1 + "&units=metric")
 
-    const api_call = await fetch("http://api.apixu.com/v1/forecast.json?key=" + API_KEY + "&q=" + zip + "&days=7")
+    const api_call = await fetch("https://api.apixu.com/v1/forecast.json?key=" + API_KEY + "&q=" + zip + "&days=7")
 
 
     const data = await api_call.json()
