@@ -21,7 +21,7 @@ import Credentials, { API_KEY } from './components/Credentials/Credentials'
 
 // const API_KEY =`${process.env.REACT_APP_WEATHER_API_KEY}`
 
-// console.log("API", API_KEY)
+console.log("API", API_KEY)
 
 
 class App extends Component {
