@@ -16,7 +16,7 @@ import CityInfo from './components/CityInfo/CityInfo';
 import Graph from './components/Graph/Graph';
 // import Credentials, { API_KEY } from './components/Credentials/Credentials'
 
-console.log(process.env.REACT_APP_API_KEY)
+// console.log(process.env.REACT_APP_API_KEY)
 
 const API_KEY = process.env.REACT_APP_API_KEY
 
