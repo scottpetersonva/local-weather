@@ -3,9 +3,6 @@
 # dependencies
 /node_modules
 
-# API Keys
-/src/components/Credentials/Credentials.js*
-
 # testing
 /coverage
 
