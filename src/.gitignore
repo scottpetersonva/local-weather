@@ -1,4 +1,4 @@
-//Credentials.js
+//components/Credentials/Credentials.js
 export const API_KEY = '12345'
 
 # dependencies
