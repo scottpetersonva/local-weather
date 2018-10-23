@@ -3,6 +3,9 @@ import logo from './logo.svg';
 import './App.css';
 
 import Plot from 'react-plotly.js';
+import Moment from 'react-moment';
+
+
 
 import Title from "./components/Title/Title"
 import Form from "./components/Form/Form"
@@ -13,10 +16,6 @@ import CityInfo from './components/CityInfo/CityInfo';
 import Graph from './components/Graph/Graph';
 import Credentials, { API_KEY } from './components/Credentials/Credentials'
 
-
-console.log(API_KEY)
-// const API_KEY1 = "0442c55bb59e3237da43de40059a4a74"
-// const API_KEY = "21c3574ef9e048b194d172850181110"
 
 
 class App extends Component {
@@ -80,7 +79,6 @@ class App extends Component {
     error: undefined
   }
 
-  // 21c3574ef9e048b194d172850181110   
 
   getWeatherByZip = async (e) => {
 
@@ -88,21 +86,18 @@ class App extends Component {
 
     const zip = e.target.elements.zip.value
 
-
-    // const api_call1 = await fetch("http://api.openweathermap.org/data/2.5/weather?zip=" + zip + ",us&APPID=" + API_KEY1 + "&units=metric")
-
     const api_call = await fetch("https://api.apixu.com/v1/forecast.json?key=" + API_KEY + "&q=" + zip + "&days=7")
 
 
     const data = await api_call.json()
-    // const data2 = await api_call2.json()
 
-    // console.log('weather:')
-    // console.log(data1)
-    // console.log('--------------------------')
     console.log('forecast:')
     console.log(data)
     console.log('--------------------------')
+
+    const conversion = data.forecast.forecastday[1].date.substring(5)
+
+    console.log(conversion)
 
 
 
@@ -147,12 +142,12 @@ class App extends Component {
         day5Lo: data.forecast.forecastday[5].day.mintemp_f,
         day6Lo: data.forecast.forecastday[6].day.mintemp_f,
 
-        day1: data.forecast.forecastday[1].date,
-        day2: data.forecast.forecastday[2].date,
-        day3: data.forecast.forecastday[3].date,
-        day4: data.forecast.forecastday[4].date,
-        day5: data.forecast.forecastday[5].date,
-        day6: data.forecast.forecastday[6].date,
+        day1: data.forecast.forecastday[1].date.substring(5),
+        day2: data.forecast.forecastday[2].date.substring(5),
+        day3: data.forecast.forecastday[3].date.substring(5),
+        day4: data.forecast.forecastday[4].date.substring(5),
+        day5: data.forecast.forecastday[5].date.substring(5),
+        day6: data.forecast.forecastday[6].date.substring(5),
 
 
         img1: data.forecast.forecastday[1].day.condition.icon,
@@ -234,6 +229,7 @@ class App extends Component {
   }
 
   render() {
+
     return (
       <div className='container-fluid'>
         <div className='row'>
@@ -254,15 +250,16 @@ class App extends Component {
             <div className='row'>
               <div className='col l4 m12 s12'>
 
-                <CurrentConditions
-                  temperature={this.state.temperature}
-                  humidity={this.state.humidity}
-                  condition={this.state.condition}
-                  wind={this.state.wind}
-                  windDirection={this.state.windDirection}
-                  currentImage={this.state.currentImage}
+                <CityInfo
+                  city={this.state.city}
+                  state={this.state.state}
+                  zip={this.state.zip}
+                  sunrise={this.state.sunrise}
+                  sunset={this.state.sunset}
                   error={this.state.error}
                 />
+
+
               </div>
               <div className='col l4 m12 s12'>
                 <Today
@@ -280,14 +277,18 @@ class App extends Component {
                 />
               </div>
               <div className='col l4 m12 s12'>
-                <CityInfo
-                  city={this.state.city}
-                  state={this.state.state}
-                  zip={this.state.zip}
-                  sunrise={this.state.sunrise}
-                  sunset={this.state.sunset}
+                
+
+                <CurrentConditions
+                  temperature={this.state.temperature}
+                  humidity={this.state.humidity}
+                  condition={this.state.condition}
+                  wind={this.state.wind}
+                  windDirection={this.state.windDirection}
+                  currentImage={this.state.currentImage}
                   error={this.state.error}
                 />
+
               </div>
             </div>
 
@@ -295,26 +296,38 @@ class App extends Component {
               day1={this.state.day1}
               img1={this.state.img1}
               condition1={this.state.condition1}
+              day1Hi={this.state.day1Hi}
+              day1Lo={this.state.day1Lo}
 
               day2={this.state.day2}
               img2={this.state.img2}
               condition2={this.state.condition2}
+              day2Hi={this.state.day2Hi}
+              day2Lo={this.state.day2Lo}
 
               day3={this.state.day3}
               img3={this.state.img3}
               condition3={this.state.condition3}
+              day3Hi={this.state.day3Hi}
+              day3Lo={this.state.day3Lo}
 
               day4={this.state.day4}
               img4={this.state.img4}
               condition4={this.state.condition4}
+              day4Hi={this.state.day4Hi}
+              day4Lo={this.state.day4Lo}
 
               day5={this.state.day5}
               img5={this.state.img5}
               condition5={this.state.condition5}
+              day5Hi={this.state.day5Hi}
+              day5Lo={this.state.day5Lo}
 
               day6={this.state.day6}
               img6={this.state.img6}
               condition6={this.state.condition6}
+              day6Hi={this.state.day6Hi}
+              day6Lo={this.state.day6Lo}
 
               error={this.state.error}
 
@@ -323,8 +336,8 @@ class App extends Component {
 
 
 
-          
-          <Graph
+
+            {/* <Graph
             day1={this.state.day1}
             day2={this.state.day2}
             day3={this.state.day3}
@@ -345,8 +358,9 @@ class App extends Component {
             day4Lo={this.state.day4Lo}
             day5Lo={this.state.day5Lo}
             day6Lo={this.state.day6Lo}
-          />
-</div>
+          /> */}
+          </div>
+
         </div>
 
 

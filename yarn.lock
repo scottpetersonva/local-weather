@@ -9787,6 +9787,11 @@ react-error-overlay@^5.0.5:
   resolved "https://registry.yarnpkg.com/react-error-overlay/-/react-error-overlay-5.0.5.tgz#716ff1a92fda76bb89a39adf9ce046a5d740e71a"
   integrity sha512-ab0HWBgxdIsngHtMGU8+8gYFdTBXpUGd4AE4lN2VZvOIlBmWx9dtaWEViihuGSIGosCKPeHCnzFoRWB42UtnLg==
 
+react-moment@^0.8.2:
+  version "0.8.2"
+  resolved "https://registry.yarnpkg.com/react-moment/-/react-moment-0.8.2.tgz#9361a38668b7864dc170a0d69ee3d0da3cc4b2c3"
+  integrity sha512-7EfyalAhGMMSUFHvPoic4lWCtXxNc3Zn0JNTvDLmVUl+P37PgyRRwOQx9UVSQ6gWryIoqdEbS1KfK3zd7CGK9Q==
+
 react-plotly.js@^2.2.0:
   version "2.2.0"
   resolved "https://registry.yarnpkg.com/react-plotly.js/-/react-plotly.js-2.2.0.tgz#238a242f3c05c993c72e1435d0c9ae2f34d7e86a"
