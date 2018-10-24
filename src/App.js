@@ -19,17 +19,6 @@ import Graph from './components/Graph/Graph';
 import API_K from './config_keys'
 const API_KEY = API_K
 
-console.log(API_KEY)
-// console.log(process.env.REACT_APP_API_KEY)
-
-// const API_KEY = process.env.REACT_APP_API_KEY
-
-// const API_KEY =`${process.env.REACT_APP_API_KEY_YT}`
-
-// console.log(API_KEY)
-
-// const API_KEY = "21c3574ef9e048b194d172850181110"
-
 class App extends Component {
 
   state = {
