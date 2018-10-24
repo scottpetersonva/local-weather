@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
+// import API_K from './config_keys.js'
 
 import Plot from 'react-plotly.js';
 import Moment from 'react-moment';
@@ -14,11 +15,20 @@ import Forecast from "./components/Forecast/Forecast"
 import Today from "./components/Today/Today"
 import CityInfo from './components/CityInfo/CityInfo';
 import Graph from './components/Graph/Graph';
-// import Credentials, { API_KEY } from './components/Credentials/Credentials'
 
+import API_K from './config_keys'
+const API_KEY = API_K
+
+console.log(API_KEY)
 // console.log(process.env.REACT_APP_API_KEY)
 
-const API_KEY = process.env.REACT_APP_API_KEY
+// const API_KEY = process.env.REACT_APP_API_KEY
+
+// const API_KEY =`${process.env.REACT_APP_API_KEY_YT}`
+
+// console.log(API_KEY)
+
+// const API_KEY = "21c3574ef9e048b194d172850181110"
 
 class App extends Component {
 
@@ -97,9 +107,9 @@ class App extends Component {
     console.log(data)
     console.log('--------------------------')
 
-    const conversion = data.forecast.forecastday[1].date.substring(5)
+    // const conversion = data.forecast.forecastday[1].date.substring(5)
 
-    console.log(conversion)
+    // console.log(conversion)
 
 
 

@@ -3,7 +3,6 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "dotenv": "^6.1.0",
     "moment": "^2.22.2",
     "plotly.js": "^1.41.3",
     "react": "^16.5.2",
