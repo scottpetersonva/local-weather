@@ -1,6 +1,6 @@
 {
   "name": "local-weather",
-  "homepage": "http://scottpetersonva.github.io/local-weather",
+  "homepage": "http://scottpetersonva.github.io/local-weather/tree/gh-pages",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
