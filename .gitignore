@@ -2,8 +2,7 @@
 
 // .gitignore
 
-# api keys
-/config_keys.js
+config_keys.js
 
 # dependencies
 /node_modules
