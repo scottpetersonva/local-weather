@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
-// import API_K from './config_keys.js'
 
 import Plot from 'react-plotly.js';
 import Moment from 'react-moment';
