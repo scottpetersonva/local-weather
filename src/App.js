@@ -15,6 +15,8 @@ import Today from "./components/Today/Today"
 import CityInfo from './components/CityInfo/CityInfo';
 import Graph from './components/Graph/Graph';
 
+require('dotenv').config()
+
 // import API_K from './config_keys.js'
 // const API_KEY = API_K
 
