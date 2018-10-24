@@ -15,17 +15,9 @@ import Today from "./components/Today/Today"
 import CityInfo from './components/CityInfo/CityInfo';
 import Graph from './components/Graph/Graph';
 
-// require('dotenv').config()
-
-// import API_K from './config_keys.js'
-// const API_KEY = API_K
-
-// console.log(`${process.env.REACT_APP_API_KEY}`);
 
 import API_K from './config'
 const API_KEY = API_K
-
-// const API_KEY = `${process.env.REACT_APP_API_KEY}`
 
 class App extends Component {
 
