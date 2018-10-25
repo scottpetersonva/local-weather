@@ -16,8 +16,10 @@ import CityInfo from './components/CityInfo/CityInfo';
 import Graph from './components/Graph/Graph';
 
 
-import API_K from './config'
-const API_KEY = API_K
+// import key_one from './config'
+const API_KEY = process.env.REACT_APP_API_KEY
+
+console.log(API_KEY)
 
 class App extends Component {
 
