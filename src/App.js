@@ -16,10 +16,11 @@ import CityInfo from './components/CityInfo/CityInfo';
 import Graph from './components/Graph/Graph';
 
 
+
 // import key_one from './config'
 const API_KEY = process.env.REACT_APP_API_KEY
 
-console.log(API_KEY)
+// console.log(API_KEY)
 
 class App extends Component {
 
@@ -86,13 +87,14 @@ class App extends Component {
   getWeatherByZip = async (e) => {
 
     e.preventDefault()
+    
 
     const zip = e.target.elements.zip.value
 
     const api_call = await fetch("https://api.apixu.com/v1/forecast.json?key=" + API_KEY + "&q=" + zip + "&days=7")
 
-
     const data = await api_call.json()
+
 
     console.log('forecast:')
     console.log(data)
@@ -236,7 +238,8 @@ class App extends Component {
     return (
       <div className='container-fluid'>
         <div className='row'>
-          <div className='col l3 m4 s12'>
+
+        <div className='col l3 m4 s12'>
 
             <div className="card blue-grey darken-1">
               <div className="card-content white-text">
@@ -248,51 +251,52 @@ class App extends Component {
               </div>
             </div>
           </div>
+
           <div className='col l9 m8 s12'>
             <Title />
             <div className='row'>
-              <div className='col l4 m12 s12'>
+            <div className='col l4 m12 s12'>
 
-                <CityInfo
-                  city={this.state.city}
-                  state={this.state.state}
-                  zip={this.state.zip}
-                  sunrise={this.state.sunrise}
-                  sunset={this.state.sunset}
-                  error={this.state.error}
-                />
-
-
-              </div>
-              <div className='col l4 m12 s12'>
-                <Today
-                  todayHi={this.state.todayHi}
-                  todayLo={this.state.todayLo}
-                  todaydHumidity={this.state.todaydHumidity}
-                  todayHumidity={this.state.todayHumidity}
-                  todayImage={this.state.todayImage}
-                  todayCondition={this.state.todayCondition}
-                  error={this.state.error}
+              <CityInfo
+                city={this.state.city}
+                state={this.state.state}
+                zip={this.state.zip}
+                sunrise={this.state.sunrise}
+                sunset={this.state.sunset}
+                error={this.state.error}
+              />
 
 
+            </div>
+            <div className='col l4 m12 s12'>
+              <Today
+                todayHi={this.state.todayHi}
+                todayLo={this.state.todayLo}
+                todaydHumidity={this.state.todaydHumidity}
+                todayHumidity={this.state.todayHumidity}
+                todayImage={this.state.todayImage}
+                todayCondition={this.state.todayCondition}
+                error={this.state.error}
 
 
-                />
-              </div>
-              <div className='col l4 m12 s12'>
-                
 
-                <CurrentConditions
-                  temperature={this.state.temperature}
-                  humidity={this.state.humidity}
-                  condition={this.state.condition}
-                  wind={this.state.wind}
-                  windDirection={this.state.windDirection}
-                  currentImage={this.state.currentImage}
-                  error={this.state.error}
-                />
 
-              </div>
+              />
+            </div>
+            <div className='col l4 m12 s12'>
+
+
+              <CurrentConditions
+                temperature={this.state.temperature}
+                humidity={this.state.humidity}
+                condition={this.state.condition}
+                wind={this.state.wind}
+                windDirection={this.state.windDirection}
+                currentImage={this.state.currentImage}
+                error={this.state.error}
+              />
+
+            </div>
             </div>
 
             <Forecast
@@ -364,8 +368,9 @@ class App extends Component {
           /> */}
           </div>
 
-        </div>
 
+          
+        </div>
 
 
 

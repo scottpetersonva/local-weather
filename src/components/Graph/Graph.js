@@ -23,7 +23,7 @@ const Graph = props => (
                     x: [props.day1Lo, props.day2Lo, props.day3Lo, props.day4Lo, props.day5Lo, props.day6Lo],
                     y: [props.day1, props.day2, props.day3, props.day4, props.day5, props.day6],
                     mode: 'markers',
-                    name: 'Percent of estimated voting age population',
+                    name: 'Temperature',
                     marker: {
                       color: 'rgba(156, 165, 196, 0.95)',
                       line: {
@@ -38,7 +38,7 @@ const Graph = props => (
                     x: [props.day1Hi, props.day2Hi, props.day3Hi, props.day4Hi, props.day5Hi, props.day6Hi],
                     y: [props.day1, props.day2, props.day3, props.day4, props.day5, props.day6],
                     mode: 'markers',
-                    name: 'Percent of estimated registered voters',
+                    name: 'Temperature',
                     marker: {
                       color: 'rgba(204, 204, 204, 0.95)',
                       line: {
@@ -52,7 +52,7 @@ const Graph = props => (
                 ]}
               layout={{
                 
-                title: 'Votes cast for ten lowest voting age population in OECD countries',
+                title: '6 Day Forecast Chart',
                 
                 xaxis: {
                   showgrid: false,
