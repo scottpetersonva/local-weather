@@ -8,7 +8,7 @@ const CurrentConditions = props => (
 <div className='row valign-wrapper'>
     <div className='col s4 m4 l4 center-align'>
     {/* <div className="card-content"> */}
-        <img src={props.currentImage} alt='today-image' className='responsive-img'></img>
+        <img src={props.currentImage} alt='today' className='responsive-img'></img>
         {/* </div> */}
     </div>
     <div className='col s8 m8 l8'>
@@ -18,7 +18,11 @@ const CurrentConditions = props => (
         { props.temperature && <p>Temperature: { props.temperature } F</p> }
         { props.humidity && <p>Humidity: { props.humidity }%</p> }
         { props.condition && <p>Conditions: { props.condition }</p> }
-        { props.wind && <p>Wind: { props.wind } MPH, {props.windDirection}</p> }
+        {/* { props.wind && <p>Wind: { props.wind } MPH, {props.windDirection}</p> } */}
+        {  <p>Wind Speed: { props.wind } MPH, { props.windDirection }</p> }
+        {/* { props.windDirection && <p>Wind Direction: { props.windDirection }</p> } */}
+
+
     </div>
 
     </div>
